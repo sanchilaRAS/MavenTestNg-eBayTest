@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Sanchila\AppData\Local\Temp\testng-eclipse--1218410384\testng-customsuite.xml</span>
+                    <span>C:\Users\Sanchila\AppData\Local\Temp\testng-eclipse--657064881\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -105,6 +105,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="com.example.TestNG" class="method navigator-link" hash-for-method="navigateToAUrl">navigateToAUrl</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.example.TestNG" class="method navigator-link" hash-for-method="searchBooks">searchBooks</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -139,6 +144,13 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="searchBooks">
+                  </a> <!-- searchBooks -->
+                  <span class="method-name">searchBooks</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="selectBooks">
                   </a> <!-- selectBooks -->
                   <span class="method-name">selectBooks</span>
@@ -149,7 +161,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Sanchila\AppData\Local\Temp\testng-eclipse--1218410384\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Sanchila\AppData\Local\Temp\testng-eclipse--657064881\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -198,20 +210,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'selectBooks')
+data.setCell(0, 1, 'searchBooks')
 data.setCell(0, 2, 'com.example.TestNG')
-data.setCell(0, 3, 11190);
+data.setCell(0, 3, 45127);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'navigateToAUrl')
+data.setCell(1, 1, 'selectBooks')
 data.setCell(1, 2, 'com.example.TestNG')
-data.setCell(1, 3, 4045);
+data.setCell(1, 3, 7345);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'navigateToAUrl')
+data.setCell(2, 2, 'com.example.TestNG')
+data.setCell(2, 3, 3571);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 seconds</span>
+              <span class="suite-total-time">Total running time: 56 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -244,16 +260,36 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">navigateToAUrl</span>
-                <span class="method-start">2068 ms</span>
+                <span class="method-start">1671 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">5249 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">6118 ms</span>
+                <span class="method-start">5507 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">searchBooks</span>
+                <span class="method-start">6954 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">52083 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">52337 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">selectBooks</span>
-                <span class="method-start">7549 ms</span>
+                <span class="method-start">53504 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">60851 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

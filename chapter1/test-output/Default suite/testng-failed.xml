@@ -5,7 +5,7 @@
     <classes>
       <class name="com.example.TestNG">
         <methods>
-          <include name="selectBooks"/>
+          <include name="searchBooks"/>
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- com.example.TestNG -->
