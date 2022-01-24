@@ -5,8 +5,11 @@
     <classes>
       <class name="com.example.TestNG">
         <methods>
+          <include name="afterMethod"/>
+          <include name="selectBooks"/>
           <include name="searchBooks"/>
           <include name="beforeMethod"/>
+          <include name="navigateToAUrl"/>
         </methods>
       </class> <!-- com.example.TestNG -->
     </classes>

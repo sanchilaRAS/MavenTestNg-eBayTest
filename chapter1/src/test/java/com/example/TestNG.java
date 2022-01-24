@@ -1,11 +1,8 @@
 package com.example;
 
-import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
+
 import java.util.ArrayList;
 
-import org.openqa.selenium.*; 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,7 +21,7 @@ public class TestNG {
     @BeforeMethod
     public void beforeMethod() {
 
-        // set path of Chromedriver executable
+        // set path of Chrome driver executable
         System.setProperty("webdriver.chrome.driver",
                 "./src/test/resources/drivers/chromedriver.exe");
 
@@ -104,21 +101,21 @@ public class TestNG {
         //Verify Name
         String ActualTitle = driver.findElement(By.xpath("//*[@id=\"mainContent\"]/div[1]/div/div[1]/section[1]/div/div/div[2]/div/div/div/div[2]/div[1]/h3/div/span/span")).getText();
         //String ExpectedTitle = title;
-        String ExpectedTitle = "["+title+"]";
+        String ExpectedTitle = title;
        // System.out.println("Actual title: "+ActualTitle);
-        Assert.assertNotEquals(ActualTitle, ExpectedTitle);
+        Assert.assertEquals(ActualTitle, ExpectedTitle);
         
         //Verify price
         String actualItemPrice= driver.findElement(By.xpath("//*[@id=\"mainContent\"]/div[1]/div/div[1]/section[1]/div/div/div[2]/div/div/div/div[2]/div[2]/div[1]/div/div/span/span")).getText();
-        String expectedItemPrice = "["+price+"]";
+        String expectedItemPrice = price;
         
-        Assert.assertNotEquals(actualItemPrice, expectedItemPrice);
-        System.out.println("Actual price: "+actualItemPrice);
+        //Assert.assertNotEquals(actualItemPrice, expectedItemPrice);
+        //System.out.println("Actual price: "+actualItemPrice);
         
         String actualPrice= driver.findElement(By.xpath("//*[@id=\"mainContent\"]/div[1]/div/div[2]/div[3]/section/div[1]/div/table/tbody/tr[3]/td[2]/span/span")).getText();
-        String expectedPrice = "["+priceWithShipping+"]";
+        String expectedPrice = priceWithShipping;
       
-        Assert.assertNotEquals(actualPrice, expectedPrice);
+        Assert.assertEquals(actualPrice, expectedPrice);
         System.out.println("Actual price: "+actualPrice);
         
         //Filling Details
@@ -128,21 +125,18 @@ public class TestNG {
            	 obj_select.selectByVisibleText("Sri Lanka");
            	 Thread.sleep(400);
            	 WebElement Fname = driver.findElement(By.xpath("//*[@id=\"firstName\"]"));
-        	 Fname.sendKeys("Sanchila");
+        	 Fname.sendKeys("Anne");
         	
         	} 
         	catch(Exception e) {
         	  //  Block of code to handle errors
         	}
        
-      	
-       
-    	
     	WebElement Lname = driver.findElement(By.xpath("//*[@id=\"lastName\"]"));
-    	Lname.sendKeys("Anne");
+    	Lname.sendKeys("Frank");
 
     	WebElement streetAddrs1 = driver.findElement(By.xpath("//*[@id=\"addressLine1\"]"));
-    	streetAddrs1.sendKeys("Frank");
+    	streetAddrs1.sendKeys("Abc");
     	
     	WebElement streetAddrs2 = driver.findElement(By.xpath("//*[@id=\"addressLine2\"]"));
     	streetAddrs2.sendKeys("Xyz");
@@ -172,7 +166,7 @@ public class TestNG {
    @AfterMethod
     public void afterMethod() {
 
-        // close and quit the browser
+        //close and quit the browser
         driver.quit();
     }
    
